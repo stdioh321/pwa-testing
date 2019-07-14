@@ -1,3 +1,56 @@
-.border-test{
-	border:solid red 1px;
+* {
+	transition: all 1s;
 }
+.grow{
+	transform: scale(1.2);
+}
+.jump{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.container{
+	position: relative;
+
+}
+.border-test{
+	border:solid rgba(0,0,0,0) 1px;
+	/*animation: blinkborder .5s infinite;	*/
+}
+
+.row img{
+	animation: shake .2s infinite;
+}
+h2:hover{
+	transform: scale(1.1);
+}
+
+
+@keyframes blinkborder {
+  0% {border:solid red 1px;}
+  50% {border:solid rgba(0,0,0,0)  1px;}
+  100% {border:solid red 1px;}
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes blinkborder {
+  0% {border:solid red 1px;}
+  50% {border:solid rgba(0,0,0,0)  1px;}
+  100% {border:solid red 1px;}
+  
+}
+
+@keyframes shake{
+	0%	{transform: translateX(0px);}
+	50%	{transform: translateX(1px);}
+	100%{transform: translateX(-1px);}
+
+
+}
+@-webkit-keyframes shake{
+	0%	{transform: translateX(0px);}
+	50%	{transform: translateX(1px);}
+	100%{transform: translateX(-1px);}
+}
+

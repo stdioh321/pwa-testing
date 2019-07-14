@@ -11,17 +11,20 @@
 			<link rel="stylesheet" type="text/css" href="styles.css">
 		</head>
 		<body>
-			<div class="container">
+			<div class="container border-test">
 				<h1>I'm PWA Testing</h1>
-				<h2>PWA Maluco</h2>
+				<h2>PWA Malucao - v1.4</h2>
+			
 				<div class="row">
 					<div class="col-12 col-md-6">
 						<img src="https://juststickers.in/wp-content/uploads/2014/05/Tux-Shape-Cut.png" alt="" class="img-fluid">
 					</div>
-					<div class="col-12 col-md-6">
-						uhuuu
+					<div class="col-12 col-md-6 text-center" >
+						Estou dentro do seu dispositivo
+						<img src="https://www.macupdate.com/images/icons256/57004.png" alt="" class="img-fluid">
 					</div>
 				</div>
+				<div class="jump"></div>
 			</div>
 			<script>
 				if ('serviceWorker' in navigator) {
@@ -34,6 +37,19 @@
 					});
 					} else {
 						console.log('CLIENT: service worker is not supported.');
+			}
+			window.onload = function(evt){
+			jump = document.querySelector('.jump');
+			img = document.createElement("img");
+			img.src = "./linux_bad.jpg";
+			img.className = "grow";
+			img.style.cssText = "width:100%;"
+			setTimeout(()=>{
+				jump.appendChild(img);
+				setTimeout(()=>{
+					jump.removeChild(img);
+				},100)
+			},5000)
 			}
 			</script>
 		</body>
